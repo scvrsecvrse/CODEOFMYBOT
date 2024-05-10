@@ -9,7 +9,7 @@ int main() {
     bot.getEvents().onAnyMessage([&bot](TgBot::Message::Ptr message) {
         printf("User wrote %s\n", message->text.c_str());
         if (message->text.find("u looser") != std::string::npos) {
-            bot.getApi().sendMessage(message->chat->id, "I got");
+            bot.getApi().sendMessage(message->chat->id, "i will send ddos attack to u");
             return;
         }
         if (StringTools::startsWith(message->text, "/start")) {
